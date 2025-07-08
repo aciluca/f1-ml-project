@@ -1,0 +1,17 @@
+venv/
+
+__pycache__/
+*.pyc
+
+.ipynb_checkpoints/
+
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db
+
+# Opzionale: ignora le cartelle con dati e modelli se sono troppo grandi
+# Decommenta (togli il #) se i tuoi dataset superano i 100MB
+# data/
+# models/
