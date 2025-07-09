@@ -1,12 +1,12 @@
-# Ambiente virtuale
+# Virtual Enviroment
 venv/
 /venv/
 
-# Cartella della cache di fastf1
+# Cache folder of fastf1
 cache/
 /cache/
 
-# File di sistema e cache di Python
+# File System and Python
 __pycache__/
 *.pyc
 .vscode/
