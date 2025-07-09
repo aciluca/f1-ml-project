@@ -1,19 +1,13 @@
+# Ambiente virtuale
 venv/
+/venv/
 
+# Cartella della cache di fastf1
+cache/
+/cache/
+
+# File di sistema e cache di Python
 __pycache__/
 *.pyc
-
-.ipynb_checkpoints/
-
 .vscode/
-.idea/
-
 .DS_Store
-Thumbs.db
-
-cache/
-
-# Opzionale: ignora le cartelle con dati e modelli se sono troppo grandi
-# Decommenta (togli il #) se i tuoi dataset superano i 100MB
-# data/
-# models/
