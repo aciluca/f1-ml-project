@@ -44,9 +44,6 @@ def create_plot(session):
             compounds_used = driver_laps['Compound'].unique()
             dynamic_order = [c for c in CANONICAL_COMPOUND_ORDER if c in compounds_used]
             
-            # --- MODIFICA FONDAMENTALE: DISEGNA UN BOX PLOT ALLA VOLTA ---
-            # Invece di una sola chiamata a sns.boxplot, cicliamo su ogni mescola
-            # per avere il controllo totale sullo stile di ogni elemento.
             for compound in dynamic_order:
                 compound_laps = driver_laps[driver_laps['Compound'] == compound]
                 color = COMPOUND_COLORS.get(compound, 'white') # Prende il colore dal dizionario

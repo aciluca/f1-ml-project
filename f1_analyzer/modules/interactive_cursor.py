@@ -56,9 +56,6 @@ class InteractiveCursor:
             d1_code = self.driver_codes['d1']
             d2_code = self.driver_codes['d2']
             
-            # --- LOGICA CORRETTA PER IL DELTA TIME ---
-            # Il delta time è sempre il gap del pilota 2 rispetto al pilota 1 (il riferimento).
-            # Lo prendiamo dai dati del pilota 2, dove lo abbiamo salvato.
             delta = data_d2['DeltaTime']
             
             tooltip_text = (
@@ -69,7 +66,6 @@ class InteractiveCursor:
                 f"{d2_code:<4} {data_d2['Speed']:<4.0f} {data_d2['RPM']:<5.0f} {data_d2['nGear']:<2.0f} {delta: >+6.2f}"
             )
             self.tooltip.set_text(tooltip_text)
-            # --- FINE LOGICA CORRETTA ---
 
             # Anche la barra di stato ora mostra il gap correttamente
             status_bar_text = (

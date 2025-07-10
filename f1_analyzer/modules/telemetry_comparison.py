@@ -24,8 +24,7 @@ def create_plot(session, driver1_code, driver2_code):
             raise ValueError(f"{driver1_code} non ha un giro veloce valido.")
         if fastest_d2 is None or pd.isna(fastest_d2.LapTime):
             raise ValueError(f"{driver2_code} non ha un giro veloce valido.")
-
-        # --- MODIFICA CHIAVE: USA DIRETTAMENTE I DATI RESTITUITI ---
+        
         # `delta_time` calcola il gap, `ref_tel` è la telemetria allineata del pilota 1,
         # `com_tel` è la telemetria allineata del pilota 2.
         # Questi dataframe contengono già tutti i canali (Speed, RPM, etc.)
@@ -34,7 +33,6 @@ def create_plot(session, driver1_code, driver2_code):
         # Aggiungiamo il delta time calcolato al dataframe del pilota di confronto
         # per averlo a disposizione nel tooltip interattivo.
         com_tel['DeltaTime'] = delta_time
-        # --- FINE MODIFICA ---
 
         team_d1_color = fastf1.plotting.get_team_color(fastest_d1['Team'], session)
         team_d2_color = fastf1.plotting.get_team_color(fastest_d2['Team'], session)
