@@ -121,7 +121,7 @@ Per avviare l'applicazione, assicurati che l’ambiente virtuale sia attivo, vai
 ```sh
 python -m f1_analyzer
 ```
-Il flag [`-m`]() dice a Python di eseguire il pacchetto f1_analyzer come applicazione, eseguendo automaticamente il file [`__main__.py`]().
+Il flag -m dice a Python di eseguire il pacchetto f1_analyzer come applicazione, eseguendo automaticamente il file __main__.py.
 
 Una volta avviata l’app:
 * Seleziona anno, evento e sessione dai menu a tendina.
